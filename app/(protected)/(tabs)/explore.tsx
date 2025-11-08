@@ -1,9 +1,10 @@
-import { Text, View } from "react-native";
+import { Box } from "@/src/components/Box";
+import { Text } from "@/src/components/Text";
 
 export default function ExploreScreen() {
   return (
-    <View>
+    <Box>
       <Text>Explore Screen</Text>
-    </View>
+    </Box>
   );
 }
