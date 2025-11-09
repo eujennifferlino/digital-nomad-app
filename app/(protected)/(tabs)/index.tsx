@@ -1,20 +1,20 @@
 import { CityCard } from "@/src/components/CityCard";
+import { Icon } from "@/src/components/Icon";
 import { Screen } from "@/src/components/Screen";
-import { Text } from "@/src/components/Text";
 import { cityPreviewList } from "@/src/data/cities";
 import { CityPreview } from "@/src/type";
 import { FlatList, ListRenderItemInfo } from "react-native";
 
 export default function HomeScreen() {
-  // const { colors } = useAppTheme();
-
   function renderItem({ item }: ListRenderItemInfo<CityPreview>) {
     return <CityCard cityPreviw={item} />;
   }
 
   return (
     <Screen>
-      <Text variant="title28">Barcelona</Text>
+      <Icon name="Beach" color="primary" size={50} />
+      <Icon name="Culture" />
+
       <FlatList data={cityPreviewList} renderItem={renderItem} />
     </Screen>
   );
